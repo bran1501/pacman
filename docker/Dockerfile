@@ -1,4 +1,4 @@
-FROM node:boron
+FROM node:alpine:3.17
 
 MAINTAINER Chris Bran
 
