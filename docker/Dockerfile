@@ -1,6 +1,6 @@
 FROM node:boron
 
-MAINTAINER Ivan Font <ifont@redhat.com>
+MAINTAINER Chris Bran
 
 # Create app directory
 RUN mkdir -p /usr/src/app
