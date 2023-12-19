@@ -132,6 +132,9 @@ function geronimo() {
             url: "user/id",
             success: function(msg){
                 game.user.id = msg;
+            const span = OtelApiGlobals.trace.getTracer('userIDINFO').startSpan('userId_value');
+            span.setAttribute('userId', game.user.id);
+            span.end();
             }
         });
     }
