@@ -126,15 +126,16 @@ function geronimo() {
     }
 
     function ajaxGetUserId() {
+           const tracer = OtelApiGlobals.trace.getTracer('pacman-christhianb-pacman-lab', '1.0.0');
         $.ajax({
             datatype: "json",
             type: "GET",
             url: "user/id",
             success: function(msg){
-                game.user.id = msg;
-            const span = OtelApiGlobals.trace.getTracer('userIDINFO').startSpan('userId_value');
-            span.setAttribute('userId', game.user.id);
-            span.end();
+              const span = tracer.startSpan('USER_ID');
+              game.user.id = msg;
+              span.setAttribute('end_user.id', game.user.id);
+              span.end();
             }
         });
     }
