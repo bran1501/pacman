@@ -4,6 +4,7 @@
  * Module dependencies.
  */
 
+var splunk_apm = require('./splunk-apm.js');
 var app = require('../app');
 //var debug = require('debug')('pacman:server');
 var http = require('http');
