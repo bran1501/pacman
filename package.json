@@ -5,7 +5,8 @@
   "author": "Chris Bran",
   "main": "bin/server.js",
   "scripts": {
-    "start": "node -r @splunk/otel/instrument .",
+    "start": "node .",
+    "splunk": "node -r @splunk/otel/instrument .",
     "dev": "nodemon ."
   },
   "license": "GPLv3",
